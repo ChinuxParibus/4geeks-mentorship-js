@@ -1,0 +1,22 @@
+:root {
+  --dark: #343a40;
+  --light: #6c757d;
+}
+.nav-pills {
+  margin-top: 3.5rem;
+}
+figure {
+  padding: 1rem;
+}
+.card {
+  margin-top: 2rem;
+}
+.nav-link {
+  color: var(--dark);
+}
+.nav-link.active {
+  background-color: var(--dark) !important;
+}
+.nav-link:hover {
+  color: var(--light);
+}
