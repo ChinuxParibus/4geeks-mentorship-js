@@ -1,0 +1,75 @@
+:root {
+  --bg-mesa: #4aad4a;
+  --color-pinta-negro: #222;
+  --color-pinta-rojo: #B00;
+  --color-carta: #EEE;
+  --color-reverse: teal;
+  --length-mesa: 450px;
+  --card-size: 12rem;
+}
+
+.casino {
+  background-color: var(--color-pinta-negro);
+}
+.rojo {
+  color: var(--color-pinta-rojo);
+}
+.negro {
+  color: var(--color-pinta-negro);
+}
+.mesa {
+  margin: 3rem auto;
+  width: 90%;
+  height: var(--length-mesa);
+  background-color: var(--bg-mesa);
+  border-radius: 20% / 50%;
+  border: 1rem solid brown;
+}
+.cards-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 4rem;
+}
+.scene {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  margin: 0 2rem !important;
+  width: 160px;
+  height: 100%;
+  position: relative;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card--back {
+  transform: rotateY(180deg);
+}
+.card--front {
+  color: var(--color-reverse);
+}
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+.card--front, .card--back {
+  background: var(--color-carta);
+  display: inline-block;
+  border-radius: 5%;
+  width: 160px;
+  height: var(--card-size);
+  font-size: var(--card-size);
+  line-height: var(--card-size);
+}
